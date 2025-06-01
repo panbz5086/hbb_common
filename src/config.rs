@@ -2374,7 +2374,7 @@ pub fn option2bool(option: &str, value: &str) -> bool {
         value != "N"
     } else if option.starts_with("allow-")
         || option == "stop-service"
-        || option == keys::OPTION_DIRECT_SERVER
+        // || option == keys::OPTION_DIRECT_SERVER
         || option == "force-always-relay"
     {
         value == "Y"
@@ -2442,11 +2442,12 @@ pub mod keys {
     pub const OPTION_ENABLE_REMOTE_RESTART: &str = "enable-remote-restart";
     pub const OPTION_ENABLE_RECORD_SESSION: &str = "enable-record-session";
     pub const OPTION_ENABLE_BLOCK_INPUT: &str = "enable-block-input";
-    pub const OPTION_ALLOW_REMOTE_CONFIG_MODIFICATION: &str = "allow-remote-config-modification";
+    // pub const OPTION_ALLOW_REMOTE_CONFIG_MODIFICATION: &str = "allow-remote-config-modification";
+    pub const OPTION_ALLOW_REMOTE_CONFIG_MODIFICATION: &str = "enable-remote-config-modification";
     pub const OPTION_ALLOW_NUMERNIC_ONE_TIME_PASSWORD: &str = "allow-numeric-one-time-password";
     pub const OPTION_ENABLE_LAN_DISCOVERY: &str = "enable-lan-discovery";
-    pub const OPTION_DIRECT_SERVER: &str = "direct-server";
-    pub const OPTION_DIRECT_ACCESS_PORT: &str = "direct-access-port";
+    pub const OPTION_DIRECT_SERVER: &str = "enable-direct-server";
+    pub const OPTION_DIRECT_ACCESS_PORT: &str = "enable-direct-access-port";
     pub const OPTION_WHITELIST: &str = "whitelist";
     pub const OPTION_ALLOW_AUTO_DISCONNECT: &str = "allow-auto-disconnect";
     pub const OPTION_AUTO_DISCONNECT_TIMEOUT: &str = "auto-disconnect-timeout";
@@ -2460,7 +2461,7 @@ pub mod keys {
     pub const OPTION_ALLOW_LINUX_HEADLESS: &str = "allow-linux-headless";
     pub const OPTION_ENABLE_HWCODEC: &str = "enable-hwcodec";
     pub const OPTION_APPROVE_MODE: &str = "approve-mode";
-    pub const OPTION_VERIFICATION_METHOD: &str = "verification-method";
+    pub const OPTION_VERIFICATION_METHOD: &str = "verification-method"; // 密码验证方法
     pub const OPTION_CUSTOM_RENDEZVOUS_SERVER: &str = "custom-rendezvous-server";
     pub const OPTION_API_SERVER: &str = "api-server";
     pub const OPTION_KEY: &str = "key";
